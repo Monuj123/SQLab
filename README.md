@@ -10,7 +10,7 @@ A frontend application to simulate SQL query execution with mock results.
 
 ## Tech Stack
 - **Framework**: React
-- **Styling**: Vanilla CSS
+- **Styling**: CSS
 - **Deployment**: Vercel
 
 ## Setup
