@@ -1,0 +1,340 @@
+/* Reset and base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #e4e4e4;
+  }
+  
+  /* App container */
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
+  
+  /* Header */
+  .app-header {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    color:#138df1
+  }
+  
+  /* Query selector */
+  .query-selector {
+    margin-bottom: 20px;
+  }
+  
+  .query-selector select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    min-width: 300px;
+  }
+  
+  /* Query input */
+  .query-input {
+    margin-bottom: 20px;
+  }
+  
+  .query-input textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    resize: vertical;
+  }
+  
+  .query-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .query-buttons button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .run-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .clear-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .copy-button {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  /* Results table */
+  .results-container {
+    margin-top: 30px;
+    overflow-x: auto;
+   
+  }
+  
+  .results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .results-table th,
+  .results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .results-table th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+  }
+  
+  .results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Loading state */
+  .loading-state {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+  }
+  
+  /* No results state */
+  .no-results {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 15px;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination button.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+  }
+  
+  /* Query history */
+  .query-history {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 4px;
+  }
+  
+  .query-history h3 {
+    margin-top: 0;
+  }
+  
+  .query-history ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .query-history li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .query-history .timestamp {
+    font-size: 0.8em;
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .query-history .query-text {
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  
+  /* Loading animation */
+  /* @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #4CAF50;
+    animation: spin 1s ease-in-out infinite;
+  }
+   */
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .query-selector select {
+      width: 100%;
+      min-width: auto;
+    }
+    
+    .query-buttons {
+      flex-direction: column;
+    }
+    
+    .query-buttons button {
+      width: 100%;
+    }
+  }
+/* Add these styles to your App.css */
+/* .sql-textarea {
+  width: 100%;
+  min-height: 100px;
+  font-family: 'Courier New', monospace;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.syntax-highlighted-query {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  min-height: 100px;
+  cursor: pointer;
+}
+
+.query-input-container {
+  margin-bottom: 20px;
+}
+
+.query-history pre {
+  margin: 5px 0;
+  padding: 0;
+  background: none !important;
+}
+
+.query-history li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.timestamp {
+  display: block;
+  color: #dbcfcf;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+} *//* Add these styles to your App.css */
+.sql-editor-container {
+  margin-bottom: 15px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sql-editor-container textarea {
+  outline: none !important;
+}
+
+.query-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.run-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-button {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-button {
+  background-color: #2196F3;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Improve the editor's syntax highlighting */
+.token.keyword {
+  color: #c678dd;
+}
+
+.token.operator {
+  color: #56b6c2;
+}
+
+.token.string {
+  color: #98c379;
+}
+
+.token.number {
+  color: #d19a66;
+}
+
+.token.comment {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.token.function {
+  color: #61afef;
+}
+
+.token.punctuation {
+  color: #abb2bf;
+}
