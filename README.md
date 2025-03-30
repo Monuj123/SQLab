@@ -11,7 +11,7 @@ A frontend application to simulate SQL query execution with mock results.
 ## Tech Stack
 - **Framework**: React
 - **Styling**: CSS
-- **Deployment**: Vercel
+- **Deployment**: Netlify
 
 ## Setup
 1. Clone the repo: `git clone [repo-url]`
