@@ -19,7 +19,7 @@ A frontend application to simulate SQL query execution with mock results.
 3. Run locally: `npm start`
 
 ## Links
-- **Live Demo**: https://sqlab.netlify.app/
+- **Live Demo**: https://sqlab2.netlify.app/
 - **Architecture Diagram**: https://drive.google.com/file/d/1xADRfaB6VFmXrhhXxCUCdOtGpD1vdZsw/view?usp=sharing
 - **Video Walkthrough**: [Demo_Video.mp4](/docs/Demo_Video.mp4)
 - **Explanation Document**: https://drive.google.com/file/d/13liJKWkR9-8TxqRRj-QemSWwcAjwgbq0/view?usp=sharing
