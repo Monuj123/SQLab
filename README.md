@@ -9,7 +9,7 @@ A frontend application to simulate SQL query execution with mock results.
 - Copy/clear functionality
 
 ## Tech Stack
-- **Framework**: React
+  - **Library**: React
 - **Styling**: CSS
 - **Deployment**: Netlify
 
